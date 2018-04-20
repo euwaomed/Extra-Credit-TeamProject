@@ -1,4 +1,5 @@
 package Asteroids;
+<<<<<<< HEAD
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Point2D;
@@ -129,3 +130,20 @@ public class AsteroidsGame extends Application {
         launch(args);
     }
 }
+=======
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class AsteroidsGame extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+
+    }
+}
+>>>>>>> f8d83d9... Adding Asteroids
