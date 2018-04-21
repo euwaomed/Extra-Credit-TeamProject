@@ -115,7 +115,7 @@ public class Connect4App extends Application {
 
         final int currentRow = row;
 
-        TranslateTransition animation = new TranslateTransition(Duration.seconds(0.125), disc);
+        TranslateTransition animation = new TranslateTransition(Duration.seconds(0.05), disc);
         animation.setToY(row * (TILE_SIZE + 5) + TILE_SIZE / 3);
         animation.setOnFinished(e -> {
             if (gameEnded(column, currentRow)) {
