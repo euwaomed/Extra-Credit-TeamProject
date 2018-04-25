@@ -1,5 +1,6 @@
 package Asteroids;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
