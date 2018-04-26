@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<BorderPane fx:id="root"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Asteroids.AsteroidsController"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="Asteroids.AsteroidsController">
+    <MenuBar BorderPane.alignment="CENTER">
+        <Menu text="Game">
+            <MenuItem text="Exit" onAction="#onExit"/>
+        </Menu>
+        <Menu text="Help">
+            <MenuItem text="About" onAction="#onAbout" />
+        </Menu>
+    </MenuBar>
 
-</AnchorPane>
+    <ListView fx:id="listView">
+
+    </ListView>
+</BorderPane>

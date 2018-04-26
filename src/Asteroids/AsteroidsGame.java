@@ -2,39 +2,32 @@ package Asteroids;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class AsteroidsGame extends Application {
-
-    private static final String title = "ASTEROIDS MAYHEM";
-    private static final String fxml_path = "Asteroids.fxml";
-
-    private Pane root;
-
+    private BorderPane root;
     private List<AsteroidsObject> bullets = new ArrayList<>();
     private List<AsteroidsObject> enemies = new ArrayList<>();
 
     private AsteroidsObject player;
 
     private Parent createContent() {
-        root = new Pane();
-        root.setPrefSize(600, 600);
-        root.getStylesheets();
+
 
         player = new Player();
         player.setVelocity(new Point2D(1, 0));
-
         addAsteroidsObject(player, 300, 300);
 
         AnimationTimer timer = new AnimationTimer() {
@@ -47,6 +40,8 @@ public class AsteroidsGame extends Application {
 
         return root;
     }
+
+
 
     private void addBullet(AsteroidsObject bullet, double x, double y) {
         bullets.add(bullet);
@@ -110,7 +105,9 @@ public class AsteroidsGame extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(createContent()));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Asteroids.fxml"));
+        stage.setScene(new Scene(loader.load()));
+//        stage.getScene(createContent());
         stage.getScene().setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.LEFT) {
                 player.rotateLeft();
