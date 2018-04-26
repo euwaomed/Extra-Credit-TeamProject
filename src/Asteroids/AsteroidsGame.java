@@ -2,17 +2,22 @@ package Asteroids;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Point2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +28,12 @@ public class AsteroidsGame extends Application {
 
     private AsteroidsObject player;
 
+    @FXML
     private Parent createContent() {
-
+        root = new BorderPane();
+        root.setPrefSize(600, 600);
+        addBackground();
+//        addFXML();
 
         player = new Player();
         player.setVelocity(new Point2D(1, 0));
@@ -42,6 +51,10 @@ public class AsteroidsGame extends Application {
     }
 
 
+//    private void addFXML(ActionEvent event)  {
+//        BorderPane newLoadedPane = FXMLLoader.load(getClass().getResource("Asteroids.fxml"));
+//        root.getChildren().add(newLoadedPane);
+//    }
 
     private void addBullet(AsteroidsObject bullet, double x, double y) {
         bullets.add(bullet);
@@ -58,6 +71,12 @@ public class AsteroidsGame extends Application {
         object.getView().setTranslateY(y);
         root.getChildren().add(object.getView());
 
+    }
+    private void addBackground() {
+        ImageView imageView = new ImageView(new Image(getClass().getResource("background.jpg").toExternalForm()));
+        imageView.setFitWidth(root.getPrefWidth());
+        imageView.setFitHeight(root.getPrefHeight());
+        root.getChildren().add(imageView);
     }
 
     private void onUpdate() {
@@ -105,9 +124,7 @@ public class AsteroidsGame extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Asteroids.fxml"));
-        stage.setScene(new Scene(loader.load()));
-//        stage.getScene(createContent());
+        stage.setScene(new Scene(createContent()));
         stage.getScene().setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.LEFT) {
                 player.rotateLeft();
