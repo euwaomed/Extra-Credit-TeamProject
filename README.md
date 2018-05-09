@@ -48,7 +48,7 @@ java -cp ".:bin" UltraGame
 ### Work Breakdown
 Asteroids game - Mark - 15 hours
 
-Pong game - Francis - 
+Pong game - Francis - 4 hours
 
 Connect 4 - Efosa - 4 hours
 
