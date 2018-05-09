@@ -24,11 +24,12 @@ Individual grades are based off the overall project grade as well as individual 
 - Any arcade style game, ex. Temple Run, Candy Crush
 
 ### Description
-Add a brief description of what your project does.
+This is a game made of 3 games.  A stylish menu is used to allow the player to pick which game they want to play.  Upon playing the game, the player feels an overwhelming sensation of entertainment.
 
 ### Authors
-- <Person 1>
-- <Person 2>
+- Mark AbiNader
+- Francis Cheng
+- Efosa Uwa-Omede
 
 ### Development
 Update the following commands to fit your project.
@@ -41,9 +42,11 @@ cp src/*.fxml bin
 
 - Execute
 ``` sh
-java -cp ".:bin" SampleApp
+java -cp ".:bin" UltraGame
 ```
 
 ### Work Breakdown
-List and describe the major tasks for the project.
-For each task include who worked on it and roughly how many hours it took.
+Asteroids game - Mark - 15 hours
+Pong game - Francis - 
+Connect 4 - Efosa - 4 hours
+Menu - Efosa - 3 hours
