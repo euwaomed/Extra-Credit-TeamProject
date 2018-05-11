@@ -21,7 +21,8 @@ Individual grades are based off the overall project grade as well as individual 
 #### Project Ideas
 - Pong game with moving ball and keyboard controlled sliders.
 - Firework animation, without user interaction.
-- Any arcade style game, ex. Temple Run, Candy Crush
+- Any arcade style game, ex. Temple Run, Candy Crush.
+- Game Menu for aesthetic purposes. 
 
 ### Description
 This is a game made of 3 games.  A stylish menu is used to allow the player to pick which game they want to play.  Upon playing the game, the player feels an overwhelming sensation of entertainment.
@@ -52,4 +53,4 @@ Pong game - Francis - 4 hours
 
 Connect 4 - Efosa - 4 hours
 
-Menu - Efosa - 3 hours
+Menu - Efosa - 6 hours - For display purposes. It ultimately couldn't launch the other games. However, it is a glimpse at what could have been and a reminder to do implementation/harder stuff at the forefront.
