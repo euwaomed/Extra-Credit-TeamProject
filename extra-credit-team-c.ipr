@@ -6,11 +6,6 @@
     </profile>
     <version value="1.0" />
   </component>
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/extra-credit-team-c.iml" filepath="$PROJECT_DIR$/extra-credit-team-c.iml" />
-    </modules>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
